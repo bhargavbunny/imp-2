@@ -1,0 +1,21 @@
+1)      Scanning .jsp files in project for sonar cube code quality checking. (At client side when pushing it on server)
+
+	please comment sonar.language and add 	sonar.web.file.suffixes=.html,.xhtml,.rhtml,.shtml, .jsp 
+	in your sonar-project properties file.
+
+
+2)      Writing Junit test cases for controller, JPA classes in MVC.
+
+
+3)      Reverting particular commit with commit id on bit bucket.
+	
+	in your git bash try this command to revert back the changes
+	git revert <commit ID>
+
+4)Checking diff between master repo after someone commit code and original master repo before commit.
+After someone has commited
+	git diff <commit ID>
+Before commiting 
+	git diff --staged)
+	
+

@@ -1,0 +1,56 @@
+sudo apt-get install software-properties-common
+
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add 
+
+
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+
+apt-get update
+
+apt-cache policy docker-ce
+
+sudo apt-get install -y docker-ce
+
+sudo systemctl status docker
+
+alias ll='ls -l --color=auto
+
+docker run -it -p 8086:8080 -p 50000:50000 -v Jenkins-1:/jenkins-1 jenkins-custom
+
+jenkins-password = = a388b594e306425892171879cf3daa08
+
+# Set the base image to Ubuntu
+FROM ubuntu
+
+# File Author / Maintainer
+MAINTAINER bhargav
+
+# Update the repository sources list
+RUN apt-get update
+
+RUN wget -q -O - https://pkg.jenkins.io/debian/jenkins-ci.org.key | sudo apt-key add -
+
+RUN sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+
+RUN sudo apt-get install jenkins
+
+
+_____________________________________________________
+
+docker service create -p 8080:8080 -p 50000:50000 --replicas 2 --name myservice bhargavbunny94/jenkins-bhargav
+
+
+
+
+
+##################### INSTALLATION END #####################
+
+# Expose the default port
+EXPOSE 8080
+
+####################### docker with a docker container ###########
+
+docker run -it -v /var/run/docker.sock:/var/run/docker.sock ubuntu:latest sh -c "apt-get update ; apt-get install docker.io -y ; bash"
+
+#######################################################################
+

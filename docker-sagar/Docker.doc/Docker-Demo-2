@@ -1,0 +1,137 @@
+
+****************** Install Docker **********************************
+
+
+Docker 1.12 : apt-get update; apt-get install -y docker.io
+
+Docker 1.17 : apt-get update; curl -sSL https://get.docker.com/ | sudo bash
+
+
+
+**** Docker version info
+
+1. docker version
+
+2. docker info
+
+
+
+*** To add new non-root user to docker group
+
+
+
+1. Stop docker service
+
+	service docker stop
+
+2. Add docker group
+
+	sudo groupadd docker
+
+3. Add new user 
+
+useradd test
+echo -e "test123\ntest123" | passwd test
+
+
+4. sudo usermod -aG docker $USER
+
+docker:x:1003:test
+
+4. restart docker service
+
+logout and again login witht he new user and try docker commands 
+
+
+
+
+
+************** Beginner Level ****************
+
+1. Run a simple container
+
+
+docker run -it --name nginx-demo nginx:latest
+
+docker run -d --name nginx-demo -p 0.0.0.0:8081:80 nginx:latest
+
+docker run -it --name nginx-demo -p 0.0.0.0:8081:80 nginx:latest /bin/bash
+
+
+
+*************************** Docker commands ***************************
+
+
+docker info	
+
+docker network	
+
+docker version	
+
+docker port
+
+docker run
+
+docker pull
+
+docker push
+
+logs
+
+network
+
+attach
+
+stop
+
+start
+
+inspect
+
+exec 
+
+history
+
+top
+
+
+
+*************************** Push Image in Docker Hub to repo ***************************
+
+1. Run a container.
+docker run -it ubuntu:latest /bin/bash
+
+2. Using Ctrl+P+Q leave the container running in backgroud. Then commit the running container with following command. This will create an image in the localhost repo.
+
+docker commit 449fd495e279 sagar23/testimage:v1
+
+3. Login with docker using docker user.
+
+docker login
+
+4. Once the login is successful push the same image using the command given below: 
+
+docker push sagar23/testimage:v1
+
+
+
+*************************** Creating your own docker images ***************************
+
+https://github.com/sagarpatil23192/docker_linking.git
+
+Please visit the above link and go through the steps mentioned in README to implement the same.
+
+*************************** Docker Compose *************************************
+
+https://github.com/sagarpatil23192/docker_compose_demo.git
+
+Please visit the above link and go through the steps mentioned in README to implement the same.
+
+
+
+In case of any queries please contact me.
+
+
+
+
+

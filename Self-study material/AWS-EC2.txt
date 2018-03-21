@@ -1,0 +1,10 @@
+http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-ug.pdf
+
+
+
+important topics for AWS
+
+1.VPC
+2.IM
+3.EC2
+4.Internet gateway.

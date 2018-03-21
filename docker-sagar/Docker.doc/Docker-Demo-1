@@ -1,0 +1,113 @@
+
+****************** Install Docker **********************************
+
+
+Docker 1.12 : apt-get update; apt-get install -y docker.io
+
+Docker 1.17 : apt-get update; curl -sSL https://get.docker.com/ | sudo bash
+
+
+
+**** Docker version info
+
+1. docker version
+
+2. docker info
+
+
+
+*** To add new non-root user to docker group
+
+
+
+1. Stop docker service
+
+	service docker stop
+
+2. Add docker group
+
+	sudo groupadd docker
+
+3. Add new user 
+
+useradd test
+echo -e "test123\ntest123" | passwd test
+
+
+4. sudo usermod -aG docker $USER
+
+docker:x:1003:test
+
+4. restart docker service
+
+logout and again login witht he new user and try docker commands 
+
+
+
+
+
+************** Beginner Level ****************
+
+1. Run a simple container
+
+
+docker run -it --name nginx-demo nginx:latest
+
+docker run -d --name nginx-demo -p 0.0.0.0:8081:80 nginx:latest
+
+docker run -it --name nginx-demo -p 0.0.0.0:8081:80 nginx:latest /bin/bash
+
+
+
+2. Try Docker commands
+
+
+docker info	
+
+docker network	
+
+docker version	
+
+docker port
+
+docker run
+
+docker pull
+
+docker push
+
+logs
+
+network
+
+attach
+
+stop
+
+start
+
+inspect
+
+exec 
+
+history
+
+top
+
+
+
+3. Push Image in Docker Hub to repo
+
+docker run -it ubuntu:latest /bin/bash
+
+docker commit 449fd495e279 sagar23/testimage:v1
+
+docker login
+
+docker push ff77651d28dd
+
+docker push sagar23/testimage:v1
+
+
+
+

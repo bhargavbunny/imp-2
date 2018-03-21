@@ -1,0 +1,84 @@
+  ls
+    2  wget https://packages.chef.io/files/stable/chefdk/2.0.28/ubuntu/16.04/chefdk_2.0.28-1_amd64.deb
+    3  ls
+    4  unzip chef-starter.zip
+    5  ls
+    6  cd chef-repo/
+    7  chef --version
+    8  cd ..
+    9  ls
+   10  apt-get install chefdk_2.0.28-1_amd64.deb
+   11  dpkg -i chefdk_2.0.28-1_amd64.deb
+   12  chef --version
+   13  knife node
+   14  knife node status
+   15  knife node list
+   16  knife bootstrap windows winrm 172.31.3.116 --winrm-user Administrator --winrm-password ')FJd-!q94qqdZZ-&!-WCR==vknk)L6ci' --node-name node1-windows
+   17  clas
+   18  ls
+   19  cd chef-repo/
+   20  ls
+   21  knife bootstrap windows winrm 172.31.3.116 --winrm-user Administrator --winrm-password ')FJd-!q94qqdZZ-&!-WCR==vknk)L6ci' --node-name node1-windows
+   22  knife bootstrap windows winrm ec2-54-186-6-77.us-west-2.compute.amazonaws.com --winrm-user Administrator --winrm-password ')FJd-!q94qqdZZ-&!-WCR==vknk)L6ci' --node-name node1-windows
+   23  knife bootstrap 34.228.75.31 -x ubuntu -i /home/ubuntu/chef-nodeA.pem -N "Ubuntu_node" --sudo
+   24  history
+   25  knife node list
+   26  knife node
+   27  knife node status node1-windows
+   28  knife node status Ubuntu_node
+   29  knife bootstrap windows winrm ec2-54-186-6-77.us-west-2.compute.amazonaws.com --winrm-user 'Administrator' --winrm-password ')FJd-!q94qqdZZ-&!-WCR==vknk)L6ci' --node-name node1-windows
+   30  chef generate cookbook httpd
+   31  cd cookbooks/
+   32  chef generate cookbook httpd
+   33  ls
+   34  cd httpd/
+   35  ls
+   36  cd recipes/
+   37  ls
+   38  vi default.rb
+   39  cd ..
+   40  knife cookbook upload httpd
+   41  knife cookbook list
+   42  knife node run_list add ubuntu_node "recipe[httpd]"
+   43  knife node list
+   44  knife node run_list add Ubuntu_node "recipe[httpd]"
+   45  knife ssh "name:Ubuntu_node" "sudo chef-client" -i /home/ubuntu/akhill-key-pair-oregon.pem
+   46  knife ssh "name:Ubuntu_node" "sudo root" -i /home/ubuntu/akhill-key-pair-oregon.pem
+   47*
+   48  knife ssh "name:00Ubuntu_node" "sudo root" -i /home/ubuntu/akhill-key-pair-oregon.pem
+   49  knife ssh "name:Ubuntu_node" "sudo root" -i /home/ubuntu/akhill-key-pair-oregon.pem
+   50  knife ssh -x ubuntu "name:Ubuntu_node" "sudo chef-client" -i /home/ubuntu/akhill-key-pair-oregon.pem
+   51  cd ..
+   52  knife ssh -x ubuntu "name:Ubuntu_node" "sudo chef-client" -i /home/ubuntu/akhill-key-pair-oregon.pem
+   53  ls
+   54  cd httpd/
+   55  ls
+   56  cd recipes/
+   57  vim default.rb
+   58  cd ..
+   59  cd cookbooks/
+   60  ls
+   61  cd httpd/
+   62  ls
+   63  cd recipes/
+   64  vim default.rb
+   65  cd ..
+   66  knife ssh -x ubuntu "name:Ubuntu_node" "sudo chef-client" -i /home/ubuntu/akhill-key-pair-oregon.pem
+   67  vim cookbooks/httpd/recipes/default.rb
+   68  history
+   69  knife cookbook upload httpd
+   70  knife ssh -x ubuntu "name:Ubuntu_node" "sudo chef-client" -i /home/ubuntu/akhill-key-pair-oregon.pem
+   71  vim cookbooks/httpd/recipes/default.rb
+   72  knife cookbook upload httpd
+   73  knife ssh -x ubuntu "name:Ubuntu_node" "sudo chef-client" -i /home/ubuntu/akhill-key-pair-oregon.pem
+   74  vim cookbooks/httpd/recipes/default.rb
+   75  knife cookbook upload httpd
+   76  knife ssh -x ubuntu "name:Ubuntu_node" "sudo chef-client" -i /home/ubuntu/akhill-key-pair-oregon.pem
+   77  vim cookbooks/httpd/recipes/default.rb
+   78  knife ssh -x ubuntu "name:Ubuntu_node" "sudo chef-client" -i /home/ubuntu/akhill-key-pair-oregon.pem
+   79  knife cookbook upload httpd
+   80  knife ssh -x ubuntu "name:Ubuntu_node" "sudo chef-client" -i /home/ubuntu/akhill-key-pair-oregon.pem
+   81  vim cookbooks/httpd/recipes/default.rb
+   82  knife cookbook upload httpd
+   83  knife ssh -x ubuntu "name:Ubuntu_node" "sudo chef-client" -i /home/ubuntu/akhill-key-pair-oregon.pem
+   84  history

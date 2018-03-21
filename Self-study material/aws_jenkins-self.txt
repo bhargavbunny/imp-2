@@ -1,0 +1,5 @@
+docker run -it --name bhargav-jenkins -p 8080:8080 -p 50000:50000 -v Jenkins-1:/jenkins-1 --link bhargav-sonarqube bhargavbunny94/jenkins-bhargav
+
+
+
+049cb8b561d4449cafb18f8c91f95035

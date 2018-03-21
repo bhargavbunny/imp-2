@@ -1,0 +1,55 @@
+apt-get install -y docker.io
+
+docker version
+docker info
+
+user name test :::: passwd -- test123
+
+useradd test
+echo -e "test123\ntest123" | passwd test
+sudo addusermod -aG docker test 
+
+sudo su   # for root login
+#pull an image 
+docker pull nginx:latest
+
+
+sudo systemctl status docker
+
+
+docker images
+______________________________________________________________________
+docker run -it --name nginx-demo nginx:latest
+
+docker ps # to check the containers running in the background
+
+docker inspect ## info about container
+ 
+ 
+ 
+ curl localhost ## container IP
+
+ docker stop 739
+
+ docker ps
+
+docker ps -a ## show all conatiner including stopped and running containers 
+ 
+ 
+ docker rm  ## container delete
+ 
+ docker run -d --name ngnix-demo -p 0.0.0.0:8081:80 nginx:latest
+
+ -d is detact mode
+ -p port forwading
+ 
+ docker port "IDCONT"
+ 
+ docker commit ID Dockerhub
+ 
+ 
+
+
+
+
+

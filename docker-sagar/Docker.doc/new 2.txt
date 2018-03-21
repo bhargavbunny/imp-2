@@ -1,0 +1,46 @@
+root@ip-172-31-1-251:/# pwd
+/
+root@ip-172-31-1-251:/# cd /root/demo
+root@ip-172-31-1-251:~/demo# ls
+root@ip-172-31-1-251:~/demo# vim Dockerfile
+root@ip-172-31-1-251:~/demo# ls
+Dockerfile
+root@ip-172-31-1-251:~/demo# vim abc.txt
+root@ip-172-31-1-251:~/demo# ls
+abc.txt  Dockerfile
+root@ip-172-31-1-251:~/demo# docker images
+
+root@ip-172-31-1-251:~/demo# docker rmi demo
+
+root@ip-172-31-1-251:~/demo# docker rmi -f demo
+
+root@ip-172-31-1-251:~/demo# docker rmi -f demo:latest
+
+root@ip-172-31-1-251:~/demo# docker rmi -f demo
+
+root@ip-172-31-1-251:~/demo#
+root@ip-172-31-1-251:~/demo# docker build -t demo:1.0 .
+
+root@ip-172-31-1-251:~/demo# docker images
+
+
+root@ip-172-31-1-251:~/demo# docker run -it -v /root/demo:/tmp/demo cfa8c680e585
+/bin/sh: 1: [/bin/bash]: not found
+
+
+
+
+root@ip-172-31-1-251:~/demo# vim Dockerfile
+
+
+root@ip-172-31-1-251:~/demo# vim Dockerfile
+
+
+
+
+root@ip-172-31-1-251:~/demo# docker build -t demo:2.0 .
+
+root@ip-172-31-1-251:~/demo# docker run -it -v /root/demo:/tmp/demo 597811b3e856
+root@81f7b42e9055:/tmp/demo# ls
+Dockerfile  abc.txt
+root@81f7b42e9055:/tmp/demo#

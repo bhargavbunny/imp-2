@@ -1,0 +1,47 @@
+Akhil Lalcheta
+[9:59 AM] Nikita Kumar: 
+
+<<< https://packages.chef.io/files/stable/chefdk/2.0.28/ubuntu/16.04/chefdk_2.0.28-1_amd64.deb
+https://learn.chef.io/modules/manage-a-node-chef-server/windows/bring-your-own-system/bootstrap-your-node#/
+1  ls
+    2  wget https://packages.chef.io/files/stable/chefdk/2.0.28/ubuntu/16.04/chefdk_2.0.28-1_amd64.deb
+    3  ls
+    4  unzip chef-starter.zip
+    5  ls
+    6  cd chef-repo/
+    7  chef --version
+    8  cd ..
+    9  ls
+   10  apt-get install chefdk_2.0.28-1_amd64.deb
+   11  dpkg -i chefdk_2.0.28-1_amd64.deb
+   12  chef --version
+   13  knife node
+   14  knife node status
+   15  knife node list
+   16  knife bootstrap windows winrm 172.31.3.116 --winrm-user Administrator --winrm-password ')FJd-!q94qqdZZ-&!-WCR==vknk)L6ci' --node-name node1-windows
+   17  clas
+   18  ls
+   19  cd chef-repo/
+   20  ls
+   21  knife bootstrap windows winrm 172.31.3.116 --winrm-user Administrator --winrm-password ')FJd-!q94qqdZZ-&!-WCR==vknk)L6ci' --node-name node1-windows
+   22  knife bootstrap windows winrm ec2-54-186-6-77.us-west-2.compute.amazonaws.com --winrm-user Administrator --winrm-password ')FJd-!q94qqdZZ-&!-WCR==vknk)L6ci' --node-name node1-windows
+   23  knife bootstrap 54.202.153.61 -x ubuntu -i /home/ubuntu/akhill-key-pair-oregon.pem -N "Ubuntu_node" --sudo
+   24  history
+
+   
+   
+   package "apache2"
+
+service "apache2" do
+        action [:enable , :start]
+end
+
+file "/var/www/html/index.html" do
+content "<html>
+        <body>
+        <h1>Hello World from #{node['platform']} </h1>
+        </body>
+        <html>
+"
+end
+~

@@ -1,0 +1,8 @@
+•	Open the Control Panel
+•	Go to System
+•	Go to Advanced Systems Properties
+•	Then Environment Variables
+•	In System Variables, click Add
+•	New Variable Name: _JAVA_OPTIONS
+•	New Variable Value: -Xmx512M
+•	Click OK
